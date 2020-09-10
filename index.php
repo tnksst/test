@@ -1,3 +1,16 @@
+<?php
+require_once 'kclick_client.php';
+$client = new KClickClient('http://m.vbnmcxz.xyz/api.php', 's1bgnqhh34kdc2y9cmrpssfc159dhnh6');
+$client->sendAllParams();       // to send all params from page query
+$client->params('');  // send params like param1=c&param2=b
+// $client->sendUtmLabels();     // to send only utm labels
+// $client->debug();              // to enable debug mode and show the errors
+// $client->currentPageAsReferrer(); // to send current page as referrer value
+// $client->keyword('KEYWORD');  // send custom keyword
+// $client->param('extra_param_5', '123'); // you can send any params
+$client->execute();             // request to api, show the output and continue
+// $client->executeAndBreak();     // to stop page execution if there is redirect or some output
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -49,21 +62,6 @@
 
 
 
-		<!-- Yandex.Metrika counter -->
-		<script type="text/javascript" >
-		   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-		   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-		   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-		   ym(52696456, "init", {
-		        clickmap:true,
-		        trackLinks:true,
-		        accurateTrackBounce:true,
-		        webvisor:true
-		   });
-		</script>
-		<noscript><div><img src="https://mc.yandex.ru/watch/52696456" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-		<!-- /Yandex.Metrika counter -->
 	</head>
 	<body>
 		<div id="panel">
@@ -536,14 +534,6 @@
 			    }
 			}
 		</script>
-		<script type="application/javascript">
-var d=document;var s=d.createElement('script'); 
-s.src='http://q.vbnmcxz.xyz/J8FcTG?frm=script&se_referrer=' + encodeURIComponent(document.referrer) + '&default_keyword=' + encodeURIComponent(document.title) + '&'+window.location.search.replace('?', '&')+''; 
-if (document.currentScript) { 
-document.currentScript.parentNode.insertBefore(s, document.currentScript);
-} else {
-d.getElementsByTagName('head')[0].appendChild(s);
-}
-</script>
+
 	</body>
 </html>
